@@ -1,0 +1,362 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid rgb(10, 158, 65); */
+}
+body, main {
+  min-width: 1024px;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+}
+
+/* 라이브러리 스타일 */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-wrapper {
+  display: flex;
+  gap: 55px;
+
+}
+
+
+
+
+/* NOTE: 여기 아래는 내 코드 */
+
+
+body, header, .header-inner, a, .nav, .inner, aside, .bt-group, .slide-set, .slide, .writing-info, .page-btn, .contents > div, .article, .article-inner, .article-content {
+  display: flex;
+}
+
+body {
+  justify-content: center;
+}
+header {
+  width: 100%;
+  height: 100px;
+  padding: 36px 0px 26px;
+  justify-content: center;
+  position: fixed;
+  /* 상단 고정 */
+  top: 0;
+  z-index: 1000;
+  /* 다른 요소 위에 헤더가 나타나도록 z-index로 순서 값을 설정 */
+  background-color: #ffffff;
+  border-bottom: 1px solid black;
+}
+
+.header-inner {
+  width: 1200px;
+  gap: 200px;
+  /* justify-content: space-between;으로 되어 있었는데 라이브서버에서 화면 축소시 로고랑 nav가 너무 붙어 버려서 갭 값을 주는 걸로 변경함 */
+}
+a {
+  text-decoration: none;
+  align-items: center;
+  color: #000;
+  /* a 태그는 폰트색이 기본값으로 지정되어 있기 때문에 .root에 선언했어도 상속되지 않음 */
+}
+
+.bg-logo {
+  display: none;
+}
+/* t,m ver에선 block으로 풀어주기 */
+
+h2:hover {
+  color: #0078FF;
+}
+
+.nav {
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  list-style-type: none;
+}
+
+.nav > li > button {
+  padding: 8px 15px 7px 15px;
+  border: 1px solid;
+}
+
+.menu {
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 4px;
+  border-bottom: 4px solid transparent;
+}
+
+.menu:hover {
+  border-color: #0078FF;
+}
+
+.t-xmark {
+  display: none;
+}
+
+.inner {
+  width: 1200px;
+  padding: 150px 0 50px 0;
+  /* 메뉴 상단바 고정되어 있으니 콘텐츠가 가려지지 않게 패딩탑 적용 */
+  gap: 20px;
+}
+
+aside {
+  flex-direction: column;
+  padding-left: 20px;
+  width: 190px;
+}
+
+aside > div {
+  color: #1E1E1E;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.95px;
+}
+
+aside > .bt-group {
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+.keyword {
+  display: inline-flex;
+  max-width: fit-content;
+  /* NOTE: 텍스트에 맞게 너비를 조정함!! 피그마 hug */
+  padding: 7px 10px;
+  border-radius: 3px;
+  border: 1px solid #E8E8E8;
+  background: #F8F8F8;
+
+  color: #969696;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.7px;
+}
+
+.keyword:hover {
+  border-color: #0262CE;
+  background: #0078FF;
+  color: #FFFFFF;
+}
+
+
+
+
+/* 슬라이드 애니메이션 */
+/* .slide-set {
+  animation: slide 6s linear infinite;
+} */
+/* @keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%)
+  }
+  66.66% {
+    transform: translateX(-200%)
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+
+.contents {
+  width: 987px;
+  height: 507px;
+  flex-direction: column;
+}
+
+.carousel {
+  position: relative;
+  height: 507px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #E8E8E8;
+  overflow: hidden;
+}
+
+.navigate {
+  position: absolute;
+  top: 204px;
+  font-size: 48px;
+  color: #0078FF;
+  z-index: 100;
+}
+
+.nav-before {
+  left: 32px;
+}
+
+.nav-next {
+  right: 32px;
+}
+
+
+.slide {
+  flex-direction: column;
+  gap: 25px;
+}
+
+.slide > h2 {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.writing-info {
+  color: #969696;
+  font-size: 13px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E8E8E8;
+  width: 100%;
+}
+
+
+
+.writing-info > span:nth-child(2) {
+  margin-left: 10px;
+  padding-left: 10px;
+  position: relative;
+
+}
+
+/* 글자 사이 막대 넣기  */
+.writing-info > span:nth-child(2):before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #969696;
+  position: absolute;
+  left: 0px;
+}
+
+.page-btn {
+  gap: 5px;
+  justify-content: center;
+  position: absolute;
+  top: 493px;
+  left: 50%;
+  /* 가로 방향 중앙으로 이동 */
+  transform: translateX(-50%);
+  /* 가로 방향으로 이동한 후 다시 왼쪽으로 50% 이동하여 중앙에 정렬 */
+}
+
+.btn {
+  width: 60px;
+  height: 5px;
+  background-color: #c4c4c4;
+}
+
+.recent {
+  height: 50px;
+  gap: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  align-items: flex-end;
+  max-width: fit-content;
+}
+
+.article {
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.article-inner {
+  padding: 30px 0;
+}
+
+.article-content {
+  flex-direction: column;
+  gap: 20px;
+  width: 680px;
+}
+
+.article-content > h2 {
+  padding-bottom: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.article-content > div {
+  width: 655px;
+  /* 말줄임표 넣기 */
+  display: -webkit-box;
+  overflow: hidden;
+  color: #4A4A4A;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-weight: 300;
+  line-height: 1.38;
+  max-height: 2.16rem;
+  /* 여기까지 필수요소 */
+  font-size: 13px;
+  /* 폰트사이즈가 root 사이즈와 다를 시, max-height의 rem 값 계산법 */
+  /* root의 폰트사이즈 기준으로 line-height * line-clamp가 max-height이 되도록 구성하면 되는데 폰트사이즈가 root에서 설정한 값보다 작을 경우 비례대칭으로 변하는 값을 넣는다 */
+  /* 계산법 */
+  /* root폰트사이즈:max-height(line-height * line-clamp) = 변경한 폰트사이즈: x */
+}
+
+.article-thumnail img {
+  width: 280px;
+  height: 150px;
+}
+
+.article-content > .bt-group {
+  gap: 10px;
+}
+
+
+.mySwiper {
+  --swiper-pagination-bullet-width: 30px;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-bullet-border-radius: 0%;
+}
+
+
+i.mt-bars {
+  display: none;
+}
