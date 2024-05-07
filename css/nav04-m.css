@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+body {
+  min-width: 480px;
+}
+
+.ico-menu {
+  display: block;
+}
+.ico-open {
+  display: flex;
+}
+.ico-open.on {
+  display: none;
+}
+.ico-close.on {
+  display: flex;
+}
+
+
+nav {
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul.menu {
+  background: #777;
+  position: fixed;
+  top: 40px;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: 0.3s;
+}
+
+ul.menu.on {
+  transform: translateX(0);
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.3);
+}
+/* [ ]일단 임시로 그림자 처리함 나중에 바꿔주기 */
+
+ul.menu::before {
+  display: none;
+}
+
+ul.menu > li {
+  display: block;
+  flex: 0 1 auto;
+  height: auto;
+  border-right: none;
+}
+
+ul.menu > li:first-child {
+  border-left: none;
+}
+
+ul.menu > li > a {
+  display: flex;
+  height: 50px;
+}
+
+ul.menu > li > .sub-menu {
+  position: relative;
+  top: 0;
+  height: auto;
+  transform: initial;
+  display: none;
+  z-index: 1;
+}
+
+ul.menu > li:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+ul.menu > li:hover .sub-menu {
+  display: block;
+}
