@@ -28,6 +28,7 @@ h6 {
   font-family: "Gothic A1", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 16px;
 }
 h1 {
   font-size: 70px;
@@ -46,10 +47,11 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 60px;
+  margin: 0 auto;
 
   /* 스스로 레이아웃 가운데정렬 */
-  margin: 0 auto;
 }
 section {
   height: 325px;
@@ -66,19 +68,19 @@ section:nth-of-type(2) .txtBox {
 section:nth-of-type(2) img {
   order: 2;
 }
-.txtBox h2 {
+.txt-box h2 {
   color: #00b9d2;
   font-weight: 600;
   font-size: 18px;
 }
-.txtBox h3 {
+.txt-box h3 {
   padding: 10px 0 45px;
   /* margin: 10px 0 45px; */
   font-size: 50px;
   font-weight: 800;
   line-height: 1;
 }
-.txtBox p {
+.txt-box p {
   line-height: 1.7;
   color: #353535;
 }

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 1px solid darkblue;
+}
+
+:root {
+  font-family: "Gothic A1", sans-serif;
+  color: #000;
+  font-size: 16px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.section2 {
+  background-image: url(/ex/image/lotte/lotte-b.png);
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+  margin: 0 auto;
+}
+
+section .inner {
+  gap: 18px;
+  height: 368px;
+  padding-top: 80px;
+}
+
+.section2 .inner {
+  gap: 60px;
+}
+
+.inner2 {
+  display: flex;
+  align-items: flex-start;
+  width: 1200px;
+  height: 690px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.section2 .inner > div {
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  padding: 100px 0 60px 0;
+
+}
+
+.section2 .inner > div > span {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.txt-box {
+  display: flex;
+  padding: 40px 40px 0px 40px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+article:nth-child(1) {
+  align-items: flex-start;
+}
+
+article:nth-child(2) {
+  padding-top: 100px;
+  align-items: flex-start;
+}
+
+article:nth-child(2) {
+  padding-top: 50px;
+  align-items: flex-start;
+}

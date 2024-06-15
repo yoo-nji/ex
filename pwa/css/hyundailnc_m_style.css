@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* 모바일.ver */
+body {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+section:nth-child(1) {
+  height: 584px;
+}
+section:nth-child(2) {
+  height: 780px;
+}
+section:nth-child(3) {
+  height: 520px;
+}
+section:nth-child(4) {
+  height: auto;
+}
+
+section:nth-child(1) .inner {
+  width: 100%;
+  height: auto;
+  gap: 20px;
+}
+
+section:nth-child(1) h1 {
+  font-size: 50px;
+  letter-spacing: normal;
+  line-height: 1.36;
+}
+
+section:nth-child(1) h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+section:nth-child(1) a, section:nth-child(3) a, section:nth-child(4) a {
+  height: 44px;
+}
+
+section:nth-of-type(2) .left {
+  height: 250px;
+  flex: 0;
+}
+
+section:nth-of-type(2) .left .inner600 {
+  padding: 50px 0;
+  gap: 50px;
+  margin: 0;
+}
+
+section:nth-of-type(2) .left h3 {
+  font-size: 30px;
+  line-height: 1;
+}
+section:nth-of-type(2) .left .inner600 img {
+  height: 120px;
+  object-fit: cover;
+}
+
+section:nth-of-type(2) .right .inner600 {
+  padding: 0;
+  gap: 0px;
+  text-align: center;
+  flex: 1;
+  height: 100%;
+}
+
+section:nth-child(2) .right h3 {
+  font-size: 30px;
+}
+
+section:nth-child(2) .right .inner600 div:nth-of-type(1) {
+  font-size: 24px;
+}
+
+section:nth-child(2) .right .inner600 div:nth-of-type(2) {
+  padding: 0 0 50px 0;
+}
+
+section:nth-child(3) a, section:nth-child(3) h2, section:nth-child(3) .right .inner600 > div > div {
+  position: initial;
+}
+
+section:nth-child(3) {
+  gap: 20px;
+}
+section:nth-child(3) .left > .inner600 {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 29px 20px;
+  height: 100%;
+  gap: 92px;
+}
+
+/* XXX: 섹션 3-1까지 함 앱솔루트 처리된 거 풀어둬서 다시 flex박스로 변경하고 위치 조절해야 될 듯... */

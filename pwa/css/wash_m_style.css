@@ -1,0 +1,22 @@
+@charset "UTF-8";
+h1 {
+  font-size: 30px;
+  color: rgb(170, 0, 161);
+}
+h1::after {
+  content: "_M";
+}
+.inner {
+  width: 100%;
+  gap: 60px;
+  padding: 0 10px;
+}
+section {
+  gap: 20px;
+}
+img {
+  height: 150px;
+}
+.txt-box {
+  padding: 0px;
+}

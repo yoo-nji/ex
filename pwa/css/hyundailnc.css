@@ -1,0 +1,280 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+/* pc.ver */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 1px solid darkred;
+}
+
+:root {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+section {
+  height: 830px;
+}
+
+section:nth-child(1) .inner,
+section:nth-child(4) .inner {
+  display: flex;
+  flex-direction: column;
+}
+
+section:nth-child(2),
+section:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+}
+
+section:nth-child(1) .inner {
+  margin: 0 auto;
+  width: 960px;
+  height: 830px;
+  padding-top: 250px;
+  gap: 20px;
+}
+
+section:nth-of-type(1) {
+  background: url(/ex/image/hyundailnc/hyund-sec1.png) no-repeat 50% /cover;
+}
+
+section:nth-child(1) h1 {
+  color: #FFF;
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 20px;
+}
+
+section:nth-child(1) h2 {
+  color: #009882;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+section:nth-child(1) .inner div, section:nth-child(4) .inner div {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+section:nth-child(1) .inner div {
+  padding-bottom: 100px;
+}
+
+section:nth-child(1) a, section:nth-child(3) a, section:nth-child(4) a {
+  background: #009882;
+  display: flex;
+  padding: 14px 64px;
+  justify-content: center;
+  color: #FFF;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  /* a 태그 밑줄 제거 */
+
+  margin: 0 auto;
+}
+
+.inner600 {
+  width: 600px;
+}
+
+.left, .right {
+  flex: 1;
+  /* left와 right가 동일한 공간을 차지하도록 설정 */
+  min-width: 0;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-end;
+  /* 부모 요소의 자식 요소들을 오른쪽으로 정렬. */
+}
+
+
+section:nth-of-type(2) .left .inner600 {
+  display: flex;
+  flex-direction: column;
+  padding: 150px 0px;
+  gap: 22px;
+  position: relative;
+  /* 자식 요소의 위치를 상대적으로 설정(이미지가 잘리지 안도록) */
+  /* overflow: visible; */
+}
+
+section:nth-child(2) .left h3 {
+  color: #000;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+}
+
+section:nth-child(2) .left img {
+  width: 690px;
+  height: 360px;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-start;
+}
+/* 부모 요소의 자식 요소를 왼쪽으로 정렬 */
+
+section:nth-child(2) .right {
+  background: #009882;
+}
+
+section:nth-of-type(2) .right .inner600 {
+  display: flex;
+  padding: 220px 0px 0px 150px;
+  flex-direction: column;
+  text-align: left;
+}
+
+
+
+section:nth-child(2) .right h3 {
+  color: #FFF;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+section:nth-child(2) .right .inner600 div:nth-of-type(1) {
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 400;
+  padding: 20px 0px;
+}
+
+section:nth-child(2) .right .inner600 div:nth-of-type(2) {
+  padding-bottom: 30px;
+}
+
+section:nth-child(2) .right .inner600 div:nth-of-type(2), div:nth-of-type(3) {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+section:nth-child(3) .left {
+  padding-top: 100px;
+  background: #F4F4F4;
+}
+
+section:nth-child(3) .left > .inner600 {
+  background: url('/ex/image/hyundailnc/hyund2-1.png') no-repeat center center / cover;
+  width: 600px;
+  height: 470px;
+  position: relative;
+  /* 상대 위치 설정 */
+}
+
+section:nth-child(3) h2, section:nth-child(4) h2 {
+  color: #FFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+section:nth-child(3) h2 {
+  position: absolute;
+  /* 절대 위치 설정 */
+  top: 40px;
+  /* 상단으로부터 40px 떨어진 곳에 위치 */
+  left: 40px;
+  /* 좌측으로부터 40px 떨어진 곳에 위치 */
+
+  /* 다른 방법 */
+  /* margin: 40px 0 0 40px; */
+  /* padding: 40px 0 0 40px; */
+}
+
+section:nth-child(3) .left a:nth-of-type(1) {
+  border: 1px solid #FFF;
+  background: none;
+  width: 200px;
+  height: 45px;
+  gap: 5px;
+}
+
+section:nth-child(3) a:nth-of-type(1) span {
+  color: #009882;
+}
+
+
+section:nth-child(3) .right .inner600 {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+section:nth-child(3) .right .inner600 > h3 {
+  color: #000;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+section:nth-child(3) .right .inner600 > div {
+  background: url('/ex/image/hyundailnc/hyund2-2.png') no-repeat center center / cover;
+  width: 600px;
+  height: 470px;
+  position: relative;
+  /* 상대 위치 설정 */
+}
+
+section:nth-child(3) .right .inner600 > div > div {
+  color: #FFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 30px;
+  font-weight: 700;
+
+  position: absolute;
+  /* 절대 위치 설정 */
+  top: 40px;
+  left: 40px;
+}
+
+section:nth-child(3) a {
+  position: absolute;
+  /* 절대 위치 설정 */
+  bottom: 40px;
+  right: 40px;
+  width: 200px;
+  white-space: nowrap;
+}
+
+section:nth-child(4) {
+  display: flex;
+  height: 600px;
+  padding: 0px 240px;
+  /* 이미지 두 장 깔아서 망점 효과 주기 */
+  /* 주의: 망점 이미지 배경을 투명하게 해 줘야 한다, 망점 투명도는 50%정도로 맞춘다 */
+  background: url(/ex/image/hyundailnc/mang.png) repeat 0 0 / 3px 3px,
+    url(/ex/image/hyundailnc/hyund-sec4.png) no-repeat 50% 20% / cover;
+  justify-content: center;
+}
+/* 슬래시"/" 뒤에는 이미지 사이즈가 오는 거임
+백그라운드 속성 쓰는 순서: 반복여부 위치(x,y좌표) / 사이즈 */
+/* 쌤 사진 위치가 50%, 20%인 이유는 쌤 사진이 크기 때문, 그냥 예쁘게 잘리라고 조절한 거임 */
+
+section:nth-child(4) .inner {
+  width: 960px;
+  display: flex;
+  padding-top: 130px;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  flex-shrink: 0;
+}
+
+section:nth-child(4) h2 {
+  font-size: 50px;
+}

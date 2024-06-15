@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.tabs_test {
+  display: flex;
+  list-style-type: none;
+  height: 300px;
+  position: relative;
+  padding: 0;
+}
+
+.tabs_test input[type="radio"] {
+  display: none;
+}
+/* 라디오버튼 동그라미 숨기기 */
+
+.tabs_test > li > label {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px 30px;
+  background: rgb(163, 163, 163);
+  color: rgb(0, 0, 0);
+}
+
+.tabs_test > li > div {
+  border: 1px solid black;
+  min-width: 600px;
+  height: 100%;
+  overflow: auto;
+  /* 이 높이를 넘어서면 스크롤바가 생기게 함 */
+  padding: 20px;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  background-color: white;
+  display: none;
+  /* 비활성화 상태일 때 안 보이게 하기 위해서 */
+}
+
+.tabs_test input[type="radio"]:checked + label {
+  background: blue;
+  color: white;
+  font-weight: bold;
+}
+
+.tabs_test input[type="radio"]:checked + label + div {
+  display: block;
+}
+
+
+.btn-box {
+  margin: 100px 0;
+  display: flex;
+}

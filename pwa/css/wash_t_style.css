@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* pc 버전에서 바뀌어야 되는 부분만 적용해 주기 */
+
+h1 {
+  font-size: 50px;
+  color: rgb(0, 157, 255);
+}
+h1::after {
+  content: "_T";
+}
+.inner {
+  width: 100%;
+  gap: 30px;
+  padding: 0 40px;
+}
+section {
+  flex-direction: column;
+  height: auto;
+  /* 피그마 허그 느낌 */
+  gap: 30px;
+  width: 100%;
+}
+img {
+  width: 100%;
+  height: 352px;
+  object-fit: cover;
+}
+section:nth-of-type(2) .txtBox, section:nth-of-type(2) img {
+  order: 0;
+}
+.txt-box {
+  gap: 5px;
+  width: 100%;
+  padding: 0 50px;
+}
+.txt-box h2 {
+  color: #00b9d2;
+  font-weight: 600;
+  font-size: 18px;
+}
+.txt-box h3 {
+  padding: 10px 0 25px;
+  font-size: 35px;
+  font-weight: 500;
+}
